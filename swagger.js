@@ -6,9 +6,16 @@ const doc = {
     version: '1.0.0',
     description: 'API for Personnel Evaluation System',
   },
-  host: 'localhost:5000',
-  basePath: '/',
-  schemes: ['http'],
+  servers: [
+    {
+      url: 'http://localhost:5000/',
+      description: 'Local server'
+    },
+    {
+      url: 'https://personnel-evaluation-backend.onrender.com/',
+      description: 'Production server'
+    }
+  ],
   components: {
     securitySchemes: {
       bearerAuth: {
